@@ -1,0 +1,45 @@
+{
+    "animals": [
+      {
+        "name": "Elephant",
+        "weight": "6000 kg",
+        "color": "Gray"
+      },
+      {
+        "name": "Tiger",
+        "weight": "220 kg",
+        "color": "Orange with black stripes"
+      },
+      {
+        "name": "Penguin",
+        "weight": "25 kg",
+        "color": "Black and white"
+      },
+      {
+        "name": "Kangaroo",
+        "weight": "85 kg",
+        "color": "Brown"
+      },
+      {
+        "name": "Giraffe",
+        "weight": "1200 kg",
+        "color": "Yellow with brown patches"
+      },
+      {
+        "name": "Panda",
+        "weight": "100 kg",
+        "color": "Black and white"
+      },
+      {
+        "name": "Zebra",
+        "weight": "350 kg",
+        "color": "Black and white stripes"
+      },
+      {
+        "name": "Parrot",
+        "weight": "1 kg",
+        "color": "Green with red beak"
+      }
+    ]
+  }
+  
