@@ -1,6 +1,6 @@
 <?php
 
-// connect with MySqul server.
+// connect with MySql server.
 $server_name = 'localhost';
 $user_name = 'root';
 $password = '';

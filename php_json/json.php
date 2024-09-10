@@ -24,7 +24,6 @@ if (file_exists($json_file)) {
     // JSON_ERROR_NONE used if no errors occurred
     echo '<h1>Displaying JSON Data</h1>';
     // Loop to iterate the JSON array.
-
     // Access the 'animals' array within the decoded JSON
     foreach ($decode_json['animals'] as $animal) {
         // Ensure that 'name', 'weight', and 'color' keys exist
@@ -33,11 +32,13 @@ if (file_exists($json_file)) {
             echo 'Weight: ' . $animal['weight'] . '<br>';
             echo 'Color: ' . $animal['color'] . '<br>';
             echo '<br>';
-        } else {
+        }
+        else {
             echo 'Error: Expected keys are missing in the JSON structure.<br>' . json_last_error_msg();
         }
     }
-} else {
+}
+else {
     echo 'File not found.';
 }
 ?>

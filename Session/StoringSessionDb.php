@@ -1,6 +1,5 @@
 <?php
 
-// include_once 'Connect.php';
 session_start();
 
 // Connecting to DB.
@@ -17,21 +16,21 @@ if($conn->connect_error) {
    echo 'Connected Sucessfully <br>';
 }
 
-// // creating table in bt to store the session data.
-// $insert = 'CREATE TABLE session_data (
-// Id INT NOT NULL ,
-// userName VARCHAR(20) NOT NULL,
-// userMail VARCHAR(30) NOT NULL,
-// userPassword VARCHAR(30) NOT NULL,
-// PRIMARY KEY (Id)
-// )';
+// creating table in DB to store the session data.
+$insert = 'CREATE TABLE session_data (
+Id INT NOT NULL ,
+userName VARCHAR(20) NOT NULL,
+userMail VARCHAR(30) NOT NULL,
+userPassword VARCHAR(30) NOT NULL,
+PRIMARY KEY (Id)
+)';
 
-// if ($conn->query($insert) === true) {
-//     echo 'Inserted Sucess Fully';
-// }
-// else {
-//     echo 'Error';
-// }
+if ($conn->query($insert) === true) {
+    echo 'Inserted Sucess Fully';
+}
+else {
+    echo 'Error';
+}
 
 // Retriving the user data.
 $use_name = $_SESSION['name'];

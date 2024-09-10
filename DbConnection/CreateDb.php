@@ -3,7 +3,7 @@
 // connecting to DB.
 include_once 'Connect.php';
 
-// Qyuert to inser a new DB.
+// Qyuert to insert a new DB.
 $query = 'CREATE DATABASE users_database';
 
 $result = $conn->query($query);

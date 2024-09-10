@@ -23,13 +23,14 @@ $httponly = true;
 
 setrawcookie($cookie_name, $cookie_value, $expire, $path, "", $secure, $httponly);
 
-// Check if the cookie is set
+// Check if the cookie is set.
 if(isset($_COOKIE[$cookie_name])) {
     echo 'Cookie Name: ' . $cookie_name . '<br>';
     echo 'Cookie Value: ' . $_COOKIE[$cookie_name] . '<br>';
     echo 'The Cookie will expire after ' . ($expire - time()) / 3600 . ' hour(s)<br>';
     echo 'It\'s a secure cookie: ' . ($secure ? 'Yes' : 'No') . '<br>';
     echo 'HTTPOnly: ' . ($httponly ? 'Yes' : 'No') . '<br>';
-} else {
+}
+else {
     echo 'Cookie is not set!';
 }

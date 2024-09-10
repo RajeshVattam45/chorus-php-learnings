@@ -14,7 +14,7 @@ if($conn->connect_error) {
    echo 'Connected Sucessfully';
 }
 
-// creating table in bt to store the session data.
+// creating table in DB to store the session data.
 $insert = 'CREATE TABLE session_data (
 Id INT NOT NULL,
 userName VARCHAR(20) NOT NULL,

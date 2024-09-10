@@ -41,7 +41,7 @@
 // Creating a custom exception class that extends the built-in Exception class.
 class FormValues extends Exception {
     // Function to return a custom error message.
-    public function verifyValues() {
+    public function displayCustomError() {
         return "Email & password should not be empty";
     }
 }
@@ -72,6 +72,6 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
     // catch Block: A block of code that handles the exception. It takes an Exception object as a parameter,
     // which provides methods to get information about the exception.
     catch (FormValues $e) {
-        echo "Error: " . $e->verifyValues();
+        echo "Error: " . $e->displayCustomError();
     }
 }
