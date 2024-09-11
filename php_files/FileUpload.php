@@ -16,8 +16,7 @@
 
     <?php
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        // Check file submitted or not.
-        // In PHP we have seper globel variable $_FILE, using this file varible we can retrive the file data.
+        // Using $_FILES file varible we can retrive the file data.
         if (isset($_FILES['upload-file']) && $_FILES['upload-file']['error'] === UPLOAD_ERR_OK) {
             // Retrive the file details.
             $retrive_file_path = $_FILES['upload-file']['tmp_name'];

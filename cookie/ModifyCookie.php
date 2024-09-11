@@ -1,7 +1,6 @@
 <?php
 
 // To modify a cookie, just set (again) the cookie using the setcookie() function.
-// Modifying thwe cookie with cookie name.
 $cookie_name = 'user';
 $cookie_value = 'Lokesh@gmail.com';
 $expire = time() + 3600;

@@ -1,12 +1,11 @@
 <?php
 
-// A callback function (often referred to as just "callback") 
-// is a function which is passed as an argument into another function.
-function displayName($name){
+// A callback function is a function which is passed as an argument into another function.
+function displayName($name) {
     return "Hellow " . $name; 
 }
 
-function callFunction($call_back, $name){
+function callFunction($call_back, $name) {
     echo $call_back($name);
 }
 callFunction('displayName', 'Rajesh');
@@ -29,7 +28,6 @@ echo '<br>';
 function cubes($number) {
     return 'Cube values ' . $number * $number * $number;
 }
-
 $cubes = array_map('cubes', $numbers);
 print_r($cubes);
 echo '<br>';
@@ -44,12 +42,12 @@ function performOperation($num1, $num2, $operation) {
 $result = performOperation(5, 3, function($a, $b) {
     return $a + $b;
 });
-
 echo "Result: " . $result;
 echo '<br>';
 
 // Define a function that accepts an array of fruits and a callback function.
 function displayFruits($fruits, $callback) {
+
     // Loop through each fruit in the array.
     foreach($fruits as $fruit) {
         // Call the callback function with the current fruit and echo the result.
@@ -59,7 +57,6 @@ function displayFruits($fruits, $callback) {
 
 // Call the displayFruits function with an array of fruits and an anonymous callback function.
 displayFruits(['Apple', 'Mango', 'Banana', 'Grapes'], function($fruit) {
-    // The callback function returns a string formatted with the fruit name.
     return 'Fruit: ' . $fruit . '<br>';
 });
 echo '<br>';

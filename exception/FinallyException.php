@@ -1,7 +1,6 @@
 <?php
 
-// finally Block (Optional): A block that always executes, regardless of whether an exception was thrown or not.
-// Useful for cleanup actions.
+// Function the to handle the text file.
 function processFile($file) {
     $open_file = fopen($file, 'w');
     $text = 'Hell php, creating new if the file doesn\'t exist';
@@ -14,10 +13,10 @@ function processFile($file) {
     catch(Exception $e) {
         echo "Caught exception: " . $e->getMessage();
     }
+    // finally Block that always executes, regardless of whether an exception was thrown or not,
+    // Useful for cleanup actions.
     finally {
-        // Check if the file was opened.
         if($open_file) {
-            // Close the file.
             fclose($open_file);
             echo "File Closed";
         }

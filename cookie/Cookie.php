@@ -1,10 +1,5 @@
 <?php
 
-// Cookies are used to store data on the user's system, allowing the data to be retrieved when the page is visited again.
-// To create a cookie, use the setcookie function, which takes up to 7 parameters.
-// Syntax: setcookie(string $name, string $value = "", int $expires = 0, string $path = "", string $domain = "",
-// bool $secure = false, bool $httponly = false);
-
 // Define the cookie name and value.
 $cookie_name = 'user_data';
 $cookie_value = 'Rajesh';

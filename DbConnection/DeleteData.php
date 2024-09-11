@@ -3,10 +3,7 @@
 // connect to DB.
 include_once 'ConnectToDb.php';
 
-// Query to delete data from the table.
 // Deleting the data from the 'users_table' table.
-
-// Delete query.
 $delete_query = "DELETE FROM users_table WHERE id='2'";
 $execuite_query = $conn->query($delete_query);
 

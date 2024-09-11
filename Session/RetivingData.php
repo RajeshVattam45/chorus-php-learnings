@@ -1,10 +1,9 @@
 <?php
 
-// Stored the user related data in SessionCookie.php file, now fetching the user related data within this file.
-// Fetching the user data from the SessionCookie.php.
+// Start a new session or resume the existing one with a unique ID.
 session_start();
 
-// Displaying all the session data.
+// Displaying all the session data array.
 print_r($_SESSION);
 echo '<br>';
 

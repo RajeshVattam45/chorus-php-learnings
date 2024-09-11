@@ -40,23 +40,25 @@
 
 // Creating a custom exception class that extends the built-in Exception class.
 class FormValues extends Exception {
+
     // Function to return a custom error message.
     public function displayCustomError() {
         return "Email & password should not be empty";
     }
+
 }
 
 // Check if the form has been submitted via a POST request.
 if ($_SERVER['REQUEST_METHOD'] === "POST") {
+
     // try Block: The block of code that you want to monitor for exceptions.
     try {
+
         // Retrieve the email and password from the POST request.
         $email = $_POST['email'];
         $password = $_POST['password'];
 
-        // Check if both the email and password fields are not empty.
         if (!empty($email) && !empty($password)) {
-            // If both fields are filled, display a success message.
             echo "Successfully Submitted with email " . $email . " and password " . $password;
 
             // Set a cookie with the email as the key and the password as the value, valid for 1 hour.
@@ -69,8 +71,6 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
         }
     }
     // Catch the custom exception and display the custom error message.
-    // catch Block: A block of code that handles the exception. It takes an Exception object as a parameter,
-    // which provides methods to get information about the exception.
     catch (FormValues $e) {
         echo "Error: " . $e->displayCustomError();
     }
